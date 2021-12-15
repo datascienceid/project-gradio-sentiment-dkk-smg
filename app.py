@@ -10,13 +10,10 @@ import pandas as pd
 
 import emoji
 
-from nltk import word_tokenize, sent_tokenize
-import nltk
-from nltk.corpus import stopwords
-# nltk.download('stopwords')
+from nltk import word_tokenize
 # nltk.download('punkt')
 
-from joblib import dump, load
+from joblib import load
 
 
 # CLEANSING
