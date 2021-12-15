@@ -11,7 +11,8 @@ import pandas as pd
 import emoji
 
 from nltk import word_tokenize
-# nltk.download('punkt')
+import nltk
+nltk.download('punkt')
 
 from joblib import load
 
