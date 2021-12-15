@@ -82,11 +82,11 @@ def predict_sentiment(text):
 
     # load model SVC
     svc = load("tfidf_svc_tuned.joblib")
-    # pred = svc.predict(feature)
-    pred = 1
+    pred = svc.predict_proba(feature)[0]
 
-    return {'Neutral': 0.1, 'Positive': 0.8, 'Negative': 0.1}
+    return {'Neutral': pred[0], 'Positive': pred[1], 'Negative': pred[2]}
 
+# sample_text1 = "Ayooo.. Tetep ProKes ketat..!!! Janhan lengah..!!! Semangat...!!!"
 gr.Interface(
     fn=predict_sentiment,
     title="Analisis Sentimen Komentar Instagram 🤗",
